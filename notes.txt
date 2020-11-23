@@ -71,8 +71,28 @@ https://www.youtube.com/watch?v=w25ea_I89iM&t=56s
     6. Then make heroku repo with 'heroku create porschefeedback'.
     7. Create a database with heroku 'heroku addons:create heroku-postgresql:hobby-dev --app porschefeedback'.
     8. then to get the production Db type 'heroku config --app porschefeedback'.
-    9. YOu should get a DB URL, copy and paste it into SQL Alchemy Database URI.
+    9. You should get a DB URL, copy and paste it into SQL Alchemy Database URI.
+    10. Next create a requirements file with 'pip freeze > requirements.txt'.
+    11. Then make Procfile for heroku 'touch Procfile'.
+    12. In the Procfile type 'web: gunicorn app:app'.
+    13. Make file called 'runtime.txt', in there put version of python to run 'python-3.8.0', note delete
+    requirements.txt and pip freeze again.
+    14. Now add everything to git repository 'git add . && git commit -m 'Initial deploy'.
+    15. Next add the remote path, under deploy tab in your heroku project, 'heroku git:remote -a porschefeedback'.
+    16. Finally push to master branch 'git push heroku master'.
 
+25. After site is up test with 'heroku open'. it won't fully work b/c db is empty.
+
+26. Type 'heroku run python'.
+    1. You are now in the interpreter >>>
+    2. Type 'from app import db'.
+    3. Then 'db.create_all()'.
+    4. then 'exit()'.
+
+27. from here we can login to the db.
+    1. 'heroku pg:psql --app porschefeedback'.
+    2. Now we can do queries 'select * from feedback;' (table name not db name).
+    3. To exit the DB type 'quit'.
 
 
 
