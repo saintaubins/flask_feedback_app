@@ -1,0 +1,79 @@
+Notes.
+
+1. Make a folder and go into the folder.
+
+2. type the following 'pip install pipenv', 
+so that you can install in a virtual environtment intead of a global system.
+
+3. To run the Virtual environment type 'pipenv shell'. this will make a 'Pipfile'.
+
+4. To get out of virtual environment type 'exit'. "but don't do now".
+
+5. We will now install the packages, type 'pipenv install flask'.
+
+6. We will now install the database adapter (for Posgrest), tpye 'pipenv install psycopg2'.
+
+7. Spme systems have issues, so we will also install 'pipenv install psycopg2-binary'.
+
+8. Next we will install DB abstract layer for working with DB almost like mongoose for Mogodb,
+'pipenv install flask-sqlalchemy'.
+
+9. Next we need to deploy http server later, type 'pipenv install gunicorn', This is for Heroku.
+
+10. We will now create the front end, make a folder named 'templates', and 'static'.
+
+11. Put logo and style.css in static folder.
+
+12. Create 'index.html', and 'success.html' in templates folder.
+
+13. To get html boilder plate type 'html:5', and hit tab.
+
+14. To make a div with class name container type '.container' and hit tab.
+
+15. Proceed to add classes img, and build the form, all building the HTML pages.
+
+16. Pasted Customer name, dealer, ratings, comments, and submit button.
+
+17. Then paste in success html, b/c very simple.
+
+18. Then create app.py, which is going to be the entry point.
+
+19. I can get the boiler plates from here. 
+
+https://www.youtube.com/watch?v=w25ea_I89iM&t=56s
+
+20. After all the models and route are created must create db and initialize the table, and columns.
+    1. Stop the server, and go into python interpreter.
+    2. Type this in 'from app import db'.
+    3. Then 'db.create_all()'.
+    4. Then 'exit()'.
+    5. This should have created all the columns, from the models.
+    6. if no errors, run server again.
+    7. Can check it by pgAdmin4 -> DBname -> Schemas -> Tables -> Refresh, tables should be there.
+
+
+21. Then test Db, send data, debug.
+
+22. Go to table name, right click -> View/Edit Data -> All Rows, data should be there.
+
+23. Test the send mail function.
+    1. Go to mailtrap.io, create an account.
+    2. Should get a user and password. easy signup with google.
+    3. Create a new file to handle mail called send_mail.py, at the root of project.
+    4. Fill in all the boiler plate example, it should all work.
+
+24. Next is deployment.
+    1. Open Heroku.
+    2. Make a '.gitignore' file at the root, and add '__pychache__', and '.vscode'.
+    3. initialize repo with 'git init'.
+    4. Make sure heroku is installed with 'heroku --version'.
+    5. Login to heroku with 'herku login', make sure app is already running in the browser.
+    6. Then make heroku repo with 'heroku create porschefeedback'.
+    7. Create a database with heroku 'heroku addons:create heroku-postgresql:hobby-dev --app porschefeedback'.
+    8. then to get the production Db type 'heroku config --app porschefeedback'.
+    9. YOu should get a DB URL, copy and paste it into SQL Alchemy Database URI.
+
+
+
+
+
