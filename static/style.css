@@ -29,6 +29,10 @@ h3 {
 
 img {
 	width: 100%;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	box-shadow: 10px 10px 5px grey;
+	
 }
 
 .message {
@@ -36,16 +40,21 @@ img {
 	padding: 5px;
 	border: #ccc dotted 2px;
 	margin-top: 2rem;
+	border-radius: 5px;
+	box-shadow: 10px 10px 5px grey;
 }
 
 .logo {
 	width: 300px;
 	display: block;
 	margin: auto;
+	
+
 }
 
 .form-group {
 	margin: 1rem 0;
+	
 }
 
 input[type='text'],
@@ -56,6 +65,8 @@ textarea {
 	padding: 0.4rem;
 	font-size: 1.2rem;
 	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: 10px 10px 5px grey;
 }
 
 .btn {
@@ -67,5 +78,8 @@ textarea {
 	border: none;
 	cursor: pointer;
 	outline: none;
-	margin-top: 1rem;
+	margin-top: 1.3rem;
+	border-radius: 5px;
+	box-shadow: 10px 10px 5px grey;
+	margin-bottom: 15px;
 }
