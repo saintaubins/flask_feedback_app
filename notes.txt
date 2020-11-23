@@ -67,7 +67,7 @@ https://www.youtube.com/watch?v=w25ea_I89iM&t=56s
     2. Make a '.gitignore' file at the root, and add '__pychache__', and '.vscode'.
     3. initialize repo with 'git init'.
     4. Make sure heroku is installed with 'heroku --version'.
-    5. Login to heroku with 'herku login', make sure app is already running in the browser.
+    5. Login to heroku with 'heroku login', make sure app is already running in the browser.
     6. Then make heroku repo with 'heroku create porschefeedback'.
     7. Create a database with heroku 'heroku addons:create heroku-postgresql:hobby-dev --app porschefeedback'.
     8. then to get the production Db type 'heroku config --app porschefeedback'.
